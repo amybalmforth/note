@@ -1,8 +1,8 @@
 (function(exports) {
   function testListNotes() {
-    var noteList = new Notelist();
+    var notelist = new Notelist();
 
-    evalequal.isEqual( );
+    evaltrue.isTrue(notelist.returnNoteList() === notelist.noteArray);
 
   };
 
