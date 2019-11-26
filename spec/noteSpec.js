@@ -2,8 +2,9 @@
   function testReturnsNote() {
     var note = new Note("test text");
 
-    eval.isTrue(note.returnNote() === "test text");
+    evaltrue.isTrue(note.returnNote() === "test text");
   };
 
   testReturnsNote();
+
 })(this);
