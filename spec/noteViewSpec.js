@@ -7,10 +7,12 @@
     notelist.createStore(note);
     notelist.createStore(note2);
 
-    evaltrue.isTrue(noteview.returnString() === 'hey');
+    evaltrue.isTrue(noteview.returnString() === '<ul><li><div>hey</div></li></ul>');
 
   };
 
   testReturnString();
 
 })(this);
+
+// <ul><li><div>Favourite food: pesto</div></li>

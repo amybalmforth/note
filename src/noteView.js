@@ -3,7 +3,7 @@
     this.notelist = notelist;
   };
   Noteview.prototype.returnString = function() {
-    return notelist.noteArray[0];
+    return '<ul><li><div>' + notelist.noteArray[0] + '</div></li></ul>';
   };
 
   exports.Noteview = Noteview;
