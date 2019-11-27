@@ -1,0 +1,22 @@
+{
+  "name": "notes-app-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amybalmforth/note.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amybalmforth/note/issues"
+  },
+  "homepage": "https://github.com/amybalmforth/note#readme",
+  "dependencies": {
+    "http-server": "^0.12.0"
+  }
+}
