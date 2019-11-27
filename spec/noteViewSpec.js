@@ -3,9 +3,7 @@
 
     var noteview = new Noteview(notelist = new Notelist);
     var note = new Note('hey');
-    var note2 = new Note('hi');
     notelist.createStore(note);
-    notelist.createStore(note2);
 
     evaltrue.isTrue(noteview.returnString() === '<ul><li><div>hey</div></li></ul>');
 
@@ -13,6 +11,28 @@
 
   testReturnString();
 
-})(this);
+  function testReturnEmptyString() {
 
-// <ul><li><div>Favourite food: pesto</div></li>
+    var noteview = new Noteview(notelist = new Notelist);
+
+    evaltrue.isTrue(noteview.returnString() === '<ul></ul>');
+
+  };
+
+  testReturnEmptyString();
+
+  function testReturnMultipleString() {
+
+    var noteview = new Noteview(notelist = new Notelist);
+    var note1 = new Note('hey');
+    var note2 = new Note('yo');
+    notelist.createStore(note1);
+    notelist.createStore(note2);
+
+    evaltrue.isTrue(noteview.returnString() === '<ul><li><div>hey</div></li><li><div>yo</div></li></ul>');
+
+  };
+
+  testReturnMultipleString();
+
+})(this);
