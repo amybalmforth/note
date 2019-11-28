@@ -1,13 +1,18 @@
 (function(exports) {
   function Notecontroller(notelist) {
     this.notelist = notelist;
-    var mynote = new Note('favourite drink: seltzer');
-    notelist.createStore(mynote);
+
 
   };
   Notecontroller.prototype.addHTML = function() {
+    var mynote = new Note('favourite drink: seltzer');
+    var thisnote = new Note('second fave drink: coffee');
+    notelist.createStore(mynote);
+    notelist.createStore(thisnote);
     var view = new Noteview(notelist);
-    return view.returnString();
+    myview = view.returnString();
+    var element = document.getElementById("app");
+    element.innerHTML = myview;
   }
 
 
@@ -16,7 +21,8 @@
   exports.Notecontroller = Notecontroller;
 })(this);
 
-var controller = new Notecontroller(notelist = new Notelist);
+// var noteview = new Noteview(notelist = new Notelist);
+//var controller = new Notecontroller(notelist = new Notelist);
 
 
 //var element = document.getElementById("app");
