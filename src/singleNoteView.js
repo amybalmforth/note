@@ -2,8 +2,8 @@
   function SingleNoteView(note) {
     this.note = note;
   };
-  SingleNoteView.prototype.returnNote = function() {
-    return this.note;
+  SingleNoteView.prototype.returnThisNote = function() {
+    return "<div>" + note.returnNote() + "</div>";
   };
 
 

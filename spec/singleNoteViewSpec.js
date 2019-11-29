@@ -1,18 +1,13 @@
 (function(exports) {
-  function testSingleNoteView() {
+
+  function testSingleNoteViewDiv() {
 
     var single = new SingleNoteView(note = new Note("Hey"));
 
-    console.log(note);
-    console.log(single.returnNote())
-
-    compare.equal(single.returnNote(), note)
-
-
-
+    compare.equal(single.returnThisNote(), "<div>Hey</div>")
 
   };
 
-  testSingleNoteView();
+  testSingleNoteViewDiv();
 
 })(this);
