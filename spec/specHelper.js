@@ -8,3 +8,13 @@ var evaltrue = {
     }
   }
 };
+var compare = {
+  equal: function(actual, expected) {
+    if (actual !== expected) {
+      throw new Error('Expected ' + expected + ' and got ' + actual);
+      console.log('Test failed');
+    } else {
+      console.log('Test passed');
+    }
+  }
+};
