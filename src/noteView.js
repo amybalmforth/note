@@ -8,9 +8,14 @@
     var start = '<ul>';
     var middle = '';
     var end = '</ul>';
+
     for (var i = 0, l = notelist.noteArray.length; i < l; i++) {
+      if (notelist.noteArray[i].length > 19) {
+        middle += '<li><div>' + notelist.noteArray[i].substring(0, 20) + '</div></li>';
+      } else {
         middle += '<li><div>' + notelist.noteArray[i] + '</div></li>';
-        //console.log(middle);
+      };
+
     };
     return start + middle + end;
   };
@@ -18,10 +23,3 @@
 
   exports.Noteview = Noteview;
 })(this);
-
-
-// var noteview = new Noteview(notelist = new Notelist);
-// var note1 = new Note("hey");
-// var note2 = new Note("hi");
-// notelist.createStore(note1);
-// notelist.createStore(note2);

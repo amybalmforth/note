@@ -15,7 +15,7 @@
 
     var noteview = new Noteview(notelist = new Notelist);
 
-    evaltrue.isTrue(noteview.returnString() === '<ul></ul>');
+    compare.equal(noteview.returnString(), '<ul></ul>');
 
   };
 
@@ -34,5 +34,17 @@
   };
 
   testReturnMultipleString();
+
+  function testReturnShortString() {
+
+    var noteview = new Noteview(notelist = new Notelist);
+    var note1 = new Note('je suis en cours de prendre le train pour aller voir ma famille')
+    notelist.createStore(note1);
+
+    compare.equal(noteview.returnString(), '<ul><li><div>je suis en cours de </div></li></ul>')
+
+  }
+
+  testReturnShortString();
 
 })(this);
